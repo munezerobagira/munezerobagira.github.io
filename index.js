@@ -7,7 +7,7 @@ for (let i = 0; i < 50; i++) {
   movingElements += `<div  class="moving" id="moving-${i}"></div>`;
   style += `
   #moving-${i}{
-    animation: move${i} 20s infinite; 
+    animation: move${i} 50s infinite; 
   }
   @keyframes move${i} {
         0% {
@@ -15,12 +15,27 @@ for (let i = 0; i < 50; i++) {
           left: ${Math.random() * width}px;
           transform: scale(${Math.random() * 1});
         }
-        20% {
+        10% {
             top: ${Math.random() * height}px;
             left: ${Math.random() * width}px;
             transform: scale(${Math.random() * 1});
           }
-        40% {
+          20% {
+            top: ${Math.random() * height}px;
+            left: ${Math.random() * width}px;
+            transform: scale(${Math.random() * 1});
+          }
+        30% {
+            top: ${Math.random() * height}px;
+            left: ${Math.random() * width}px;
+            transform: scale(${Math.random() * 1});
+          }
+          40% {
+            top: ${Math.random() * height}px;
+            left: ${Math.random() * width}px;
+            transform: scale(${Math.random() * 1});
+          }
+          50% {
             top: ${Math.random() * height}px;
             left: ${Math.random() * width}px;
             transform: scale(${Math.random() * 1});
@@ -30,7 +45,17 @@ for (let i = 0; i < 50; i++) {
             left: ${Math.random() * width}px;
             transform: scale(${Math.random() * 1});
           }
-        80% {
+        70% {
+            top: ${Math.random() * height}px;
+            left: ${Math.random() * width}px;
+            transform: scale(${Math.random() * 1});
+          }
+          80% {
+            top: ${Math.random() * height}px;
+            left: ${Math.random() * width}px;
+            transform: scale(${Math.random() * 1});
+          }
+          90% {
             top: ${Math.random() * height}px;
             left: ${Math.random() * width}px;
             transform: scale(${Math.random() * 1});

@@ -11,13 +11,13 @@ body {
   box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 a {
-  color: seagreen;
+  color: rgb(55, 163, 102);
 }
 ul {
   list-style-type: none;
 }
 #app {
-  position: relative;
+  background: linear-gradient(rgb(16, 15, 20), rgb(39, 34, 66), rgb(0, 0, 0));
 }
 * {
   padding: 0px;
@@ -61,10 +61,10 @@ h3,
 h4,
 h5,
 h6 {
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 10px 10px;
   border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 main {
   z-index: 1000;
@@ -72,25 +72,19 @@ main {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(rgb(39, 34, 66), rgb(0, 0, 0));
   color: white;
   padding: 40px;
 }
 header {
   /* background-color: black; */
-  background: linear-gradient(rgb(8, 7, 22), rgb(39, 34, 66));
   color: white;
 }
 footer {
   height: 100px;
-  background-color: black;
   color: white;
 }
 #container {
   z-index: -1;
 }
 @media (min-height: 900px) {
-  * {
-    display: none;
-  }
 }
