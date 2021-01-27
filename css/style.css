@@ -1,0 +1,142 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 1000 version
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+body {
+  background-color: rgb(39, 39, 39);
+  color: white;
+  font-family: "Chelsea Market", cursive;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/spider.jpg) center/cover fixed;
+  max-width: 100%;
+}
+#profile {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  max-height: 300px;
+  max-width: 300px;
+  margin: 20px 0px;
+  -webkit-box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+#hero {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.2)),
+      to(rgba(0, 0, 0, 0.2))
+    ),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/spider.jpg) center/cover fixed;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 100%, 100% 60%, 80% 0, 20% 0, 0 60%);
+}
+.ov-hidden {
+  overflow: hidden;
+}
+#home {
+  padding-top: 40px;
+  min-height: 100vh;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.border-right {
+  border-right: 4px solid rgba(255, 166, 0, 0.377);
+  padding-left: 20px;
+}
+.border-left {
+  border-left: 4px solid rgba(255, 166, 0, 0.377);
+  padding-right: 20px;
+}
+.roadmap-text {
+  border-bottom: 4px solid rgba(255, 166, 0, 0.377);
+  min-height: 200px;
+  /* max-height: 200px; */
+}
+.roadmap-text.noborder {
+  border-bottom: 0px transparent;
+  min-height: 200px;
+  /* max-height: 200px; */
+}
+#terminal {
+  height: 500px;
+  padding: 20px;
+}
+.window-title {
+  margin: auto;
+  font-size: 0.8rem;
+}
+.window {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+
+  border: 1px solid rgba(0, 0, 0, 0.616);
+  border-radius: 10px;
+}
+.window-tab {
+  background-color: rgb(61, 61, 61);
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px;
+}
+.mac-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0px 4px;
+}
+
+.mac-btn.red {
+  background-color: rgb(211, 71, 71);
+}
+.mac-btn.yellow {
+  background-color: rgba(238, 238, 25, 0.932);
+}
+.mac-btn.green {
+  background-color: green;
+}
+.terminal-space {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.typing-cursor {
+  animation: TypingCursor 1s ease-in-out infinite;
+}
+
+@keyframes TypingCursor {
+  0% {
+    border-right: 2px transparent;
+  }
+  100% {
+    border-right: 2px solid white;
+  }
+}
