@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 1000 version
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 body {
   background-color: rgb(39, 39, 39);
@@ -23,6 +16,14 @@ body {
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../images/spider.jpg) center/cover fixed;
   background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/spider.jpg) center/cover fixed;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
     url(../images/spider.jpg) center/cover fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../images/spider.jpg) center/cover fixed;
@@ -54,10 +55,19 @@ body {
     url(../images/spider.jpg) center/cover fixed;
   background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/spider.jpg) center/cover fixed;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.2)),
+      to(rgba(0, 0, 0, 0.2))
+    ),
+    url(../images/spider.jpg) center/cover fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/spider.jpg) center/cover fixed;
   height: 100%;
   width: 100%;
+  -webkit-clip-path: polygon(50% 100%, 100% 60%, 80% 0, 20% 0, 0 60%);
   clip-path: polygon(50% 100%, 100% 60%, 80% 0, 20% 0, 0 60%);
 }
 .ov-hidden {
@@ -101,16 +111,22 @@ body {
   background-color: rgb(34, 34, 34);
 
   border: 1px solid rgba(0, 0, 0, 0.616);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
 }
 .window-tab {
   background-color: rgb(61, 61, 61);
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
   border-radius: 10px 10px 0px 0px;
   padding: 5px;
 }
 .mac-btn {
   width: 15px;
   height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   margin: 0px 4px;
 }
@@ -129,7 +145,37 @@ body {
   font-size: 0.8rem;
 }
 .typing-cursor {
+  -webkit-animation: TypingCursor 1s ease-in-out infinite;
+  -moz-animation: TypingCursor 1s ease-in-out infinite;
+  -o-animation: TypingCursor 1s ease-in-out infinite;
   animation: TypingCursor 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes TypingCursor {
+  0% {
+    border-right: 2px transparent;
+  }
+  100% {
+    border-right: 2px solid white;
+  }
+}
+
+@-moz-keyframes TypingCursor {
+  0% {
+    border-right: 2px transparent;
+  }
+  100% {
+    border-right: 2px solid white;
+  }
+}
+
+@-o-keyframes TypingCursor {
+  0% {
+    border-right: 2px transparent;
+  }
+  100% {
+    border-right: 2px solid white;
+  }
 }
 
 @keyframes TypingCursor {
