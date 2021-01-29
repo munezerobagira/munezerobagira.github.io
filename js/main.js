@@ -1,6 +1,4 @@
-let container = document.querySelector("#command");
-container.classList.add("d-inline");
-let data = {
+let mainData = {
   home: "Sostene-browser-Mac-pro: Sostene poto$",
   options: [
     {
@@ -10,18 +8,35 @@ let data = {
         "<br>"
       ),
     },
+    {
+      name: "skills",
+      details: ` <li><b>HMTL:</b> Advanced
+      <b>Javascript:</b> Advanced
+      <b>CSS:</b> Advanced
+      <b>NODEJS:</b> Advanced
+      <b> Web design:</b> Intermediate
+      <b>API:</b> Advanced
+      <b> C++:</b> Intermediate
+      <b>JAVA:</b> Intermidiate
+      <b>Python</b> Intermediate<ol>`.replace(/(\n)/g, "</li><li>"),
+    },
   ],
 };
-container.innerHTML = data.home;
+let container = document.querySelector("#command");
+container.classList.add("typing-cursor");
+container.classList.add("d-inline");
+container.innerHTML = mainData.home;
+let parent = container.parentElement;
+let counter = 0;
+parent.appendChild(container);
 setTimeout(
   function (data) {
     let span = document.createElement("span");
-    // span.classList.add("type");
     span.innerHTML = " " + data;
     container.append(span);
   },
   3000,
-  data.options[0].name
+  mainData.options[counter].name
 );
 setTimeout(
   function (data) {
@@ -29,8 +44,45 @@ setTimeout(
     span.classList.add("data");
     span.innerHTML = data;
     container.parentElement.append(span);
+    let cloneElement = container.cloneNode(true);
+    cloneElement.innerHTML = mainData.home;
+    container.parentElement.append(cloneElement);
     container.classList.remove("typing-cursor");
+    counter++;
   },
   4000,
-  data.options[0].details
+  mainData.options[counter].details
 );
+setInterval(function () {
+  let container = document.querySelector("#command");
+  container.classList.add("typing-cursor");
+  container.classList.add("d-inline");
+  container.innerHTML = mainData.home;
+  let parent = container.parentElement;
+  parent.innerHTML = "";
+  parent.appendChild(container);
+  setTimeout(
+    function (data) {
+      let span = document.createElement("span");
+      span.innerHTML = " " + data;
+      container.append(span);
+    },
+    3000,
+    mainData.options[counter].name
+  );
+  setTimeout(
+    function (data) {
+      let span = document.createElement("p");
+      span.classList.add("data");
+      span.innerHTML = data;
+      container.parentElement.append(span);
+      let cloneElement = container.cloneNode(true);
+      container.classList.remove("typing-cursor");
+      cloneElement.innerHTML = mainData.home;
+      container.parentElement.append(cloneElement);
+      counter = counter + 1 >= mainData.options.length ? 1 : counter + 1;
+    },
+    4000,
+    mainData.options[counter].details
+  );
+}, 7000);
