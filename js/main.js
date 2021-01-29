@@ -1,11 +1,11 @@
 let container = document.querySelector("#command");
-container.classList.add("typing-cursor", "d-inline");
+container.classList.add("d-inline");
 let data = {
   home: "Sostene-browser-Mac-pro: Sostene poto$",
   options: [
     {
       name: "help",
-      details: "cv - list  all my previous work , social - list all social media , github - list all public github repostories,  ".replace(
+      details: "cv - list  all my previous work , social - list all social media ,skills- list all my skills,  github - list all public github repostories,  ".replace(
         /\,/g,
         "<br>"
       ),
@@ -16,7 +16,7 @@ container.innerHTML = data.home;
 setTimeout(
   function (data) {
     let span = document.createElement("span");
-    span.classList.add("type");
+    // span.classList.add("type");
     span.innerHTML = " " + data;
     container.append(span);
   },
