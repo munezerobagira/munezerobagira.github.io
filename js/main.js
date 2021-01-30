@@ -1,3 +1,14 @@
+(function () {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+    }
+  };
+  xhttp.open("GET", "https://api.github.com/users/sos10e", true);
+  xhttp.send();
+})();
+
 let mainData = {
   home: "Sostene-browser-Mac-pro: Sostene poto$",
   options: [
@@ -10,7 +21,7 @@ let mainData = {
     },
     {
       name: "skills",
-      details: ` <li><b>HMTL:</b> Advanced
+      details: `<li><b>HMTL:</b> Advanced
       <b>Javascript:</b> Advanced
       <b>CSS:</b> Advanced
       <b>NODEJS:</b> Advanced
