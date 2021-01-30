@@ -150,7 +150,12 @@ body {
   -o-animation: TypingCursor 1s ease-in-out infinite;
   animation: TypingCursor 1s ease-in-out infinite;
 }
-
+.nav-link {
+  color: orange;
+}
+.nav-link:hover {
+  color: white;
+}
 @-webkit-keyframes TypingCursor {
   0% {
     border-right: 2px transparent;
