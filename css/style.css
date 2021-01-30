@@ -151,10 +151,13 @@ body {
   animation: TypingCursor 1s ease-in-out infinite;
 }
 .nav-link {
-  color: orange;
+  color: rgba(238, 238, 25, 0.932);
 }
 .nav-link:hover {
   color: white;
+}
+.text-orange {
+  color: rgba(238, 238, 25, 0.932);
 }
 @-webkit-keyframes TypingCursor {
   0% {
